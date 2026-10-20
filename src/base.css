@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #F3F6FA;
+  --surface: #FFFFFF;
+  --surface2: #EEF4FB;
+  --fg: #16253A;
+  --muted: #56677D;
+  --line: #D6E0EC;
+  --brand: #0176D3;
+  --brand-text: #0B5CAB;
+  --brand-soft: #E5F1FB;
+  --band: #032D60;
+  --on-band: #FFFFFF;
+  --btn: #0176D3;
+  --btn-hover: #014486;
+  --on-btn: #FFFFFF;
+  --ok: #2E844A;
+  --ok-soft: #EAF5EC;
+  --ng: #BA0517;
+  --ng-soft: #FCEBEC;
+  --warn: #8C4B02;
+  --warn-soft: #FEF1DC;
+  --font-body: "Noto Sans JP", "Hiragino Sans", "Yu Gothic UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0A1422;
+    --surface: #111F33;
+    --surface2: #172943;
+    --fg: #E4EDF8;
+    --muted: #9AADC4;
+    --line: #243A59;
+    --brand: #4AA3F0;
+    --brand-text: #8CC4F7;
+    --brand-soft: #0F2D4C;
+    --band: #06213F;
+    --on-band: #FFFFFF;
+    --btn: #1B7FD4;
+    --btn-hover: #0B5CAB;
+    --on-btn: #FFFFFF;
+    --ok: #63C682;
+    --ok-soft: #10301D;
+    --ng: #FF8089;
+    --ng-soft: #3A1219;
+    --warn: #F2B04C;
+    --warn-soft: #36270C;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0A1422;
+  --surface: #111F33;
+  --surface2: #172943;
+  --fg: #E4EDF8;
+  --muted: #9AADC4;
+  --line: #243A59;
+  --brand: #4AA3F0;
+  --brand-text: #8CC4F7;
+  --brand-soft: #0F2D4C;
+  --band: #06213F;
+  --on-band: #FFFFFF;
+  --btn: #1B7FD4;
+  --btn-hover: #0B5CAB;
+  --on-btn: #FFFFFF;
+  --ok: #63C682;
+  --ok-soft: #10301D;
+  --ng: #FF8089;
+  --ng-soft: #3A1219;
+  --warn: #F2B04C;
+  --warn-soft: #36270C;
+  color-scheme: dark;
+}
+html, body { background: var(--bg); color: var(--fg); }
+body { font-family: var(--font-body); font-size: 15px; line-height: 1.75; }
+.gutter { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { text-wrap: balance; }
+.mono { font-family: var(--font-mono); }
+.tnum { font-variant-numeric: tabular-nums; }
+.eyebrow { letter-spacing: 0.08em; }
+button:focus-visible { outline: 3px solid var(--brand); outline-offset: 2px; }
+.fade-in { animation: fadeIn .28s ease-out; }
+@keyframes fadeIn { from { transform: translateY(4px); opacity: .6; } to { transform: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .fade-in { animation: none; } * { transition: none !important; } }
+header { padding-top: env(safe-area-inset-top, 0px); }
