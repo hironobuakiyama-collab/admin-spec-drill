@@ -1,4 +1,4 @@
-const CACHE = "admin-spec-drill-049b6c9314";
+const CACHE = "admin-spec-drill-2bdf805330";
 const ASSETS = ["./", "./index.html", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png", "./apple-touch-icon.png"];
 
 self.addEventListener("install", (e) => {
