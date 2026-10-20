@@ -86,3 +86,5 @@ button:focus-visible { outline: 3px solid var(--brand); outline-offset: 2px; }
 @keyframes fadeIn { from { transform: translateY(4px); opacity: .6; } to { transform: none; opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { .fade-in { animation: none; } * { transition: none !important; } }
 header { padding-top: env(safe-area-inset-top, 0px); }
+#root { min-height: 100dvh; display: flex; flex-direction: column; }
+#root > * { flex-shrink: 0; }

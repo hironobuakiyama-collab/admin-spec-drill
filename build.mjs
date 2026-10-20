@@ -7,13 +7,14 @@ rmSync("docs", { recursive: true, force: true });
 mkdirSync("docs");
 
 const js = await build({
-  entryPoints: ["src/main.jsx"],
+  entryPoints: ["src/main.tsx"],
   bundle: true,
   minify: true,
   write: false,
   format: "iife",
   target: ["es2019", "safari14"],
-  jsx: "transform",
+  jsx: "automatic",
+  tsconfig: "tsconfig.json",
   define: { "process.env.NODE_ENV": '"production"' }
 });
 const jsCode = js.outputFiles[0].text.replace(/<\/script/gi, "<\\/script");
